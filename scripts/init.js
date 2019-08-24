@@ -6,6 +6,8 @@ const copyfiles = util.promisify(require('copyfiles'));
 
 const templateFolder = path.join(__dirname, '../templates/javascript');
 const projectFolder = process.cwd();
+const packageFile = path.join(projectFolder, 'package.json');
+const projectName = path.basename(projectFolder);
 
 (async () => {
     console.log('copying boilerplate project files...');
@@ -17,8 +19,14 @@ const projectFolder = process.cwd();
     process.chdir(projectFolder);
     console.log('project files were copied!');
 
+    console.log('applying project name...');
+    const package = require(packageFile);
+    package.name = projectName;
+    fs.writeFileSync(packageFile, JSON.stringify(package, null, 2));
+    console.log('project name applied!')
+
     console.log('installing dependencies...');
-    await execSync('npm install --save-dev @strafbier/custom-module-scripts');
+    await execSync('npm install --save-dev @toasta/custom-module-scripts');
     console.log('dependencies successfully installed!')
 
 

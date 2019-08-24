@@ -1,5 +1,5 @@
 {
-  "name": "@strafbier/custom-module-scripts",
+  "name": "@toasta/custom-module-scripts",
   "version": "1.0.0",
   "description": "",
   "main": "./bin/custom-module.js",
