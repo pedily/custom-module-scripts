@@ -1,0 +1,12 @@
+{
+  "name": "example-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/module.js",
+  "scripts": {
+    "build": "custom-module build",
+    "deploy": "custom-module deploy"
+  },
+  "author": "",
+  "license": "ISC"
+}
