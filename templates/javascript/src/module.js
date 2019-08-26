@@ -24,6 +24,8 @@ async function add(cognigy, args) {
             error: error
         }
     }
+
+    return cognigy;
 }
 
 module.exports.add = add;
