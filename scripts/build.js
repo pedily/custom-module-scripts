@@ -30,6 +30,10 @@ const bundle = () => new Promise((resolve, reject) => {
     archive.file('package.json');
     archive.file('package-lock.json');
     archive.file('README.md');
+    
+    archive.file('icon.png');
+    archive.file('icon-large.png');
+
     archive.directory('src');
 
     archive.finalize();
