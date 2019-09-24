@@ -80,6 +80,7 @@ const deploy = async (package) => {
         console.log('deleting old custom module from remote...');
         await deleteRemoteModule(remoteModule._id);
         console.log('old custom module was deleted from remote!');
+        await new Promise(r => setTimeout(r, 3 * 1000));
     }
 
     console.log('uploading new custom module...');
