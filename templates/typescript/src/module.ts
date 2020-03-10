@@ -1,3 +1,10 @@
+interface IAddArgs {
+    number1: number;
+    number2: number;
+    store: string;
+    stopOnError: boolean;
+}
+
 /**
  * Adds two numbers together
  * @arg {CognigyScript} `number1` The first number
@@ -5,7 +12,7 @@
  * @arg {CognigyScript} `store` Where to store the result
  * @arg {Boolean} `stopOnError` Whether to stop on error or continue
  */
-async function add(cognigy: IFlowInput, args: any) {
+async function add(cognigy: IFlowInput, args: IAddArgs) {
     const { number1, number2, store, stopOnError } = args;
     const context = cognigy.context.getFullContext?.();
 
