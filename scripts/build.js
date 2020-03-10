@@ -34,7 +34,7 @@ const bundle = () => new Promise((resolve, reject) => {
     archive.file('icon.png');
     archive.file('icon-large.png');
 
-    archive.directory('src');
+    archive.directory(path.dirname(package.main));
 
     archive.finalize();
 });

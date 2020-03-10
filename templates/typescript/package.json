@@ -1,0 +1,16 @@
+{
+  "name": "example-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/module.js",
+  "scripts": {
+    "transpile": "tsc",
+    "build": "npm run transpile && custom-module build",
+    "deploy": "custom-module deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}

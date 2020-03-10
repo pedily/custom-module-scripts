@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const path = require('path');
 
-const [,, ...args] = process.argv;
+const [, , ...args] = process.argv;
 
 const command = args[0];
 
@@ -16,5 +16,9 @@ switch (command) {
 
     case 'init':
         require('../scripts/init');
+        break;
+
+    case 'init-ts':
+        require('../scripts/init-ts');
         break;
 }
